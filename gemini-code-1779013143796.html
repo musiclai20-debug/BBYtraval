@@ -4,9 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>日系極簡隨行行程</title>
+  
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
   <style>
     /* 隱藏滾動條但保留滾動功能 */
     .no-scrollbar::-webkit-scrollbar { display: none; }
@@ -237,7 +241,7 @@
             '美食': 'fa-solid fa-utensils',
             '購物': 'fa-solid fa-bag-shopping',
             '航班': 'fa-solid fa-plane',
-            'other': 'fa-solid fa-comment-dots'
+            '其他': 'fa-solid fa-comment-dots'
           };
           return icons[cat] || 'fa-solid fa-bookmark';
         };
@@ -254,7 +258,6 @@
           return classes[cat] || 'bg-gray-100 text-gray-600';
         };
 
-        // 這裡已經修正為標準的字串串接語法，絕對不會報錯了！
         const openGoogleMaps = () => {
           const currentDayPlan = timelineData.value[selectedDay.value] || [];
           if (currentDayPlan.length > 0) {
